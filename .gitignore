@@ -5,3 +5,9 @@ cache
 artifacts
 node_modules
 package-lock.json
+
+#react files
+
+/react-dapp/node_modules
+/react-dapp/package-lock.json
+
