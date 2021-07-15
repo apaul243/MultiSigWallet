@@ -7,21 +7,28 @@ Multisigwallet provides a higher level of security as compared to regular wallet
 HOW DOES THE WALLET WORK ? 
 
 ● Wallet can be initiated by passing a list of owners and the minimum no of confirmations 'N' required to execute a transaction.
+
 ● Any of the owners can initiate a transaction which will emit the "SubmitTransaction" event on the network.
+
 ● Owners can confirm the indexed transaction by passing the appropriate index number which will emit the "ConfirmTransaction" event.
+
 ● Any of the owners can execute the transaction if sufficient number of confirmations have been gathered, the transaction will be executed.
+
 ● There are other available methods to check the state of the smart contract like: getOwners(), getTransaction(uint index),getTransactionList()
 
 TECH OVERVIEW
 
 ● Application has been created with HardHat framework with HardHat providing automatic compiling of smart contracts stored inside /contracts and running tests  inside /test. Any other deployement scripts are stored in the /scripts folder. 
+
 ● Smart contracts have been tested using Truffle framework
+
 ● An interactive react-based frontend has been created which can be used as follows:
 --> Connect to Metamask wallet with the network set to Ropsten (or LocalHost if you are just testing it on your Local hardhat environment)
 --> Create a new wallet by passing the owner addresses and minimum number of confirmations required
 --> Create a transaction by passing the following fields on the UI : To, Value and Data
 --> Confirm the transaction from N wallet owners ( by switching Metamask account)
 --> Finally click on 'Execute Transaction' to complete it.
+
 ● You can also use the application without the UI, by simply changing the account numbers in deploy.js
 
 INSTALLATION 
