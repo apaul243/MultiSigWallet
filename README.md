@@ -4,6 +4,23 @@ Multisigwallet provides a higher level of security as compared to regular wallet
 
 (NOTE : Latest versions of MultiSigWallet perform transaction initiation and transaction confirmation offchain. Only operation that takes place on-chain is the execution. This version has been created for understanding Solidity and creating a working, end-to-end application)
 
+<b>INSTALLATION</b> 
+
+<b>SETTING UP HARDHAT ENVIRONMENT</b> 
+
+1. Clone the GitHub repo using : git clone {repo-url} ( enter the repository url without the curly braces) 
+2. Inside the repo folder, open terminal and run the following command : npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+3. Compile your smart contracts: npx hardhat compile
+4. Run your tests: npx hardhat test
+5. Fire up your local hardhat instance : npx hardhat node ( This will automatically create a blockchain and provide you with 20 account addresses used to deploy and test your smart contracts. Each account is also loaded up with 10,000 fake Ether.)
+6. Finally, deploy the smart contracts on your local hardhat instance : npx hardhat run scripts/deploy.js --network localhost
+
+<b>SETTING UP REACT APP</b> 
+
+1. Run the following command to create the react-app: npx create-react-app react-dapp
+2. npm start
+3. Go to localhost:3000 to use the multisig wallet application
+
 <b>HOW DOES THE WALLET WORK ? </b>
 
 ● Wallet can be initiated by passing a list of owners and the minimum no of confirmations 'N' required to execute a transaction. \
@@ -24,22 +41,6 @@ Multisigwallet provides a higher level of security as compared to regular wallet
 --> Finally click on 'Execute Transaction' to complete it. \
 ● You can also use the application without the UI, by simply changing the account numbers in deploy.js \
 
-<b>INSTALLATION</b> 
-
-<b>SETTING UP HARDHAT ENVIRONMENT</b> 
-
-1. Clone the GitHub repo using : git clone {repo-url} ( enter the repository url without the curly braces) 
-2. Inside the repo folder, open terminal and run the following command : npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
-3. Compile your smart contracts: npx hardhat compile
-4. Run your tests: npx hardhat test
-5. Fire up your local hardhat instance : npx hardhat node ( This will automatically create a blockchain and provide you with 20 account addresses used to deploy and test your smart contracts. Each account is also loaded up with 10,000 fake Ether.)
-6. Finally, deploy the smart contracts on your local hardhat instance : npx hardhat run scripts/deploy.js --network localhost
-
-<b>SETTING UP REACT APP</b> 
-
-1. Run the following command to create the react-app: npx create-react-app react-dapp
-2. npm start
-3. Go to localhost:3000 to use the multisig wallet application
 
 
 
